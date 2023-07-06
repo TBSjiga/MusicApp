@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Common.86.0.241\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.86.0.241\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.86.0.24\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.86.0.24\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.86.0.24\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.86.0.24\build\cef.redist.x64.props')" />
+  <Import Project="..\packages\CefSharp.WinForms.86.0.241\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.86.0.241\build\CefSharp.WinForms.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{8F91455E-B28C-4C34-81D7-E02DEE3EDFBA}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>MusicApp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\..\Downloads\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NAudio">
+      <HintPath>..\..\..\..\..\..\Downloads\NAudio(1)\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AddItemMusicEdit.cpp" />
+    <ClCompile Include="AuthForm.cpp" />
+    <ClCompile Include="AuthFunction.cpp" />
+    <ClCompile Include="AuthInterface.cpp" />
+    <ClCompile Include="Complex.cpp" />
+    <ClCompile Include="CreateRoomForm.cpp" />
+    <ClCompile Include="ElemList.cpp" />
+    <ClCompile Include="FFTransform.cpp" />
+    <ClCompile Include="FrequencyCheck.cpp" />
+    <ClCompile Include="HomeForm.cpp" />
+    <ClCompile Include="LibraryFunctionItem.cpp" />
+    <ClCompile Include="ListAudioItem.cpp" />
+    <ClCompile Include="ListIconConf.cpp" />
+    <ClCompile Include="ListUserItem.cpp" />
+    <ClCompile Include="ListWayItem.cpp" />
+    <ClCompile Include="MediaPlayer.cpp" />
+    <ClCompile Include="MixFileMusic.cpp" />
+    <ClCompile Include="MovingTrack.cpp" />
+    <ClCompile Include="MusicEditForm.cpp" />
+    <ClCompile Include="MusicEditInterface.cpp" />
+    <ClCompile Include="MusicEditSaveFile.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="RecordAudio.cpp" />
+    <ClCompile Include="RoomFunction.cpp" />
+    <ClCompile Include="RoomItem.cpp" />
+    <ClCompile Include="SaveAudioForm.cpp" />
+    <ClCompile Include="SettingsStudioForm.cpp" />
+    <ClCompile Include="SetupInterface.cpp" />
+    <ClCompile Include="SplashScreenForm.cpp" />
+    <ClCompile Include="TabItem.cpp" />
+    <ClCompile Include="TabList.cpp" />
+    <ClCompile Include="TabOpen.cpp" />
+    <ClCompile Include="Tabs.cpp" />
+    <ClCompile Include="TabSave.cpp" />
+    <ClCompile Include="WayEditorItem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AuthForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Complex.h" />
+    <ClInclude Include="CreateRoomForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ElemList.h" />
+    <ClInclude Include="FFTransform.h" />
+    <ClInclude Include="FrequencyCheck.h" />
+    <ClInclude Include="HomeForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="json.hpp" />
+    <ClInclude Include="ListAudioItem.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="ListIconConf.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="ListUserItem.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="ListWayItem.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="MusicEditForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="NetFunction.h" />
+    <ClInclude Include="RoomItem.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="SaveAudioForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SettingsStudioForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SplashScreenForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TabItem.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="TabList.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="TabOpen.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Tabs.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TabSave.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="WayEditorItem.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AuthForm.resx">
+      <DependentUpon>AuthForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateRoomForm.resx">
+      <DependentUpon>CreateRoomForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListAudioItem.resx">
+      <DependentUpon>ListAudioItem.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListIconConf.resx">
+      <DependentUpon>ListIconConf.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListUserItem.resx">
+      <DependentUpon>ListUserItem.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListWayItem.resx">
+      <DependentUpon>ListWayItem.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusicEditForm.resx">
+      <DependentUpon>MusicEditForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomItem.resx">
+      <DependentUpon>RoomItem.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveAudioForm.resx">
+      <DependentUpon>SaveAudioForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsStudioForm.resx">
+      <DependentUpon>SettingsStudioForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabOpen.resx">
+      <DependentUpon>TabOpen.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs.resx">
+      <DependentUpon>Tabs.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabSave.resx">
+      <DependentUpon>TabSave.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WayEditorItem.resx">
+      <DependentUpon>WayEditorItem.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\CefSharp.WinForms.86.0.241\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.86.0.241\build\CefSharp.WinForms.targets')" />
+    <Import Project="..\packages\CefSharp.Common.86.0.241\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.86.0.241\build\CefSharp.Common.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.86.0.241\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.86.0.241\build\CefSharp.WinForms.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.86.0.241\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.86.0.241\build\CefSharp.WinForms.targets'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x64.86.0.24\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.86.0.24\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.86.0.24\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.86.0.24\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.86.0.241\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.86.0.241\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.86.0.241\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.86.0.241\build\CefSharp.Common.targets'))" />
+  </Target>
+</Project>
